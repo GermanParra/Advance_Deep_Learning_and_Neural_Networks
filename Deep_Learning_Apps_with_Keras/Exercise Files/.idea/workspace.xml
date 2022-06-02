@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfdd7eed-336e-4666-9009-49fa3808cb89" name="Changes" comment="">
+    <list default="true" id="8cb0f49f-33bd-4c92-afe9-f30628e7261f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03/create_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/03/create_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/03/preprocess_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03/sales_data_test_scaled.csv" beforeDir="false" afterPath="$PROJECT_DIR$/03/sales_data_test_scaled.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03/sales_data_training_scaled.csv" beforeDir="false" afterPath="$PROJECT_DIR$/03/sales_data_training_scaled.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +17,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="29z4S2k4cFHLVxnLWeER5spiicy" />
+  <component name="ProjectId" id="2A02wMJQiltJL8XTPgC1ri5SuyP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,11 +26,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/GPARR/OneDrive/Escritorio/LAMBDA/LAMBDA SCHOOL/GIT-REPOS/Advance_Deep_Learning_and_Neural_Networks/Deep_Learning_Apps_with_Keras/Exercise Files/03/preprocess_data.py"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.create_model">
+  <component name="RunManager">
     <configuration name="create_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Exercise Files" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,31 +51,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="preprocess_data" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Exercise Files" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\GPARR\anaconda3\envs\Keras\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03/preprocess_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="true" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.preprocess_data" />
-      <item itemvalue="Python.create_model" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.create_model" />
@@ -88,11 +60,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bfdd7eed-336e-4666-9009-49fa3808cb89" name="Changes" comment="" />
-      <created>1654102575942</created>
+      <changelist id="8cb0f49f-33bd-4c92-afe9-f30628e7261f" name="Changes" comment="" />
+      <created>1654132419843</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654102575942</updated>
+      <updated>1654132419843</updated>
     </task>
     <servers />
   </component>
