@@ -34,5 +34,6 @@ test_error_rate = model.evaluate(X_test, Y_test, verbose=0)
 print("The mean squared error (MSE) for the test data set is: {}".format(test_error_rate))
 
 # Save the model to disk
-
+model.save("trained_model.h5")
+print("Model saved to disk.")
 
