@@ -2,6 +2,7 @@ import pandas as pd
 import keras
 from keras.models import Sequential
 from keras.layers import *
+from keras.callbacks import TensorBoard
 
 training_data_df = pd.read_csv("sales_data_training_scaled.csv")
 
@@ -17,7 +18,11 @@ model.add(Dense(1, activation='linear', name='output_layer'))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 # Create a TensorBoard logger
-
+logger = TensorBoard(
+    log_dir="logs",
+    write_graph=True,
+    histogram_freq=5
+)
 
 # Train the model
 model.fit(
@@ -25,7 +30,8 @@ model.fit(
     Y,
     epochs=50,
     shuffle=True,
-    verbose=2
+    verbose=2,
+    callbacks=[logger]
 )
 
 # Load the separate test data set
