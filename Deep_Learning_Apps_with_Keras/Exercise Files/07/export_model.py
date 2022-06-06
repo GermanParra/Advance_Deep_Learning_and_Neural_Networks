@@ -1,8 +1,9 @@
 import pandas as pd
-import keras
+import tensorflow.python.keras.backend as K
 from keras.models import Sequential
 from keras.layers import *
 import tensorflow as tf
+from keras.callbacks import TensorBoard
 
 training_data_df = pd.read_csv("sales_data_training_scaled.csv")
 
@@ -18,7 +19,7 @@ model.add(Dense(1, activation='linear', name='output_layer'))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 # Create a TensorBoard logger
-logger = keras.callbacks.TensorBoard(
+logger = TensorBoard(
     log_dir='logs',
     histogram_freq=5,
     write_graph=True
@@ -43,27 +44,30 @@ Y_test = test_data_df[['total_earnings']].values
 test_error_rate = model.evaluate(X_test, Y_test, verbose=0)
 print("The mean squared error (MSE) for the test data set is: {}".format(test_error_rate))
 
+model_builder = tf.compat.v1.saved_model.Builder("exported_model") #tf.saved_model.builder.SavedModelBuilder("exported_model")
 
-model_builder = tf.saved_model.builder.SavedModelBuilder("exported_model")
+if tf.executing_eagerly():
+    tf.compat.v1.disable_eager_execution()
+    sess = tf.compat.v1.Session()
 
 inputs = {
-    'input': tf.saved_model.utils.build_tensor_info()
+    'input': tf.compat.v1.saved_model.build_tensor_info(model.input) #tf.saved_model.utils.build_tensor_info()
 }
 outputs = {
-    'earnings': tf.saved_model.utils.build_tensor_info()
+    'earnings': tf.compat.v1.saved_model.build_tensor_info(model.output) #tf.saved_model.utils.build_tensor_info()
 }
 
-signature_def = tf.saved_model.signature_def_utils.build_signature_def(
+signature_def = tf.compat.v1.saved_model.build_signature_def( #tf.saved_model.signature_def_utils.build_signature_def(
     inputs=inputs,
     outputs=outputs,
-    method_name=tf.saved_model.signature_constants.PREDICT_METHOD_NAME
+    method_name=tf.compat.v1.saved_model.signature_constants.PREDICT_METHOD_NAME  #tf.saved_model.signature_constants.PREDICT_METHOD_NAME
 )
 
 model_builder.add_meta_graph_and_variables(
     K.get_session(),
-    tags=[tf.saved_model.tag_constants.SERVING],
+    tags=[tf.compat.v1.saved_model.tag_constants.SERVING], #[tf.saved_model.tag_constants.SERVING],
     signature_def_map={
-        tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY: signature_def
+        tf.compat.v1.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY: signature_def #tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY: signature_def
     }
 )
 

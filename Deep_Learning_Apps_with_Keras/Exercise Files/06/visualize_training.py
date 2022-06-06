@@ -2,6 +2,9 @@ import pandas as pd
 import keras
 from keras.models import Sequential
 from keras.layers import *
+from keras.callbacks import TensorBoard
+
+RUN_NAME = "run 2 with 75 nodes"
 
 training_data_df = pd.read_csv("sales_data_training_scaled.csv")
 
@@ -10,15 +13,15 @@ Y = training_data_df[['total_earnings']].values
 
 # Define the model
 model = Sequential()
-model.add(Dense(50, input_dim=9, activation='relu', name='layer_1'))
+model.add(Dense(75, input_dim=9, activation='relu', name='layer_1'))
 model.add(Dense(100, activation='relu', name='layer_2'))
 model.add(Dense(50, activation='relu', name='layer_3'))
 model.add(Dense(1, activation='linear', name='output_layer'))
 model.compile(loss='mean_squared_error', optimizer='adam')
 
 # Create a TensorBoard logger
-logger = keras.callbacks.TensorBoard(
-    log_dir='logs',
+logger = TensorBoard(
+    log_dir=f'logs/{RUN_NAME}',
     histogram_freq=5,
     write_graph=True
 )
