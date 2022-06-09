@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cb0f49f-33bd-4c92-afe9-f30628e7261f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/06/logs/train/events.out.tfevents.1654300703.LAPTOP-USJLPM4C.16456.0.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/06/visualize_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/06/visualize_training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07/export_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/07/export_model.py" afterDir="false" />
-    </list>
+    <list default="true" id="8cb0f49f-33bd-4c92-afe9-f30628e7261f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
