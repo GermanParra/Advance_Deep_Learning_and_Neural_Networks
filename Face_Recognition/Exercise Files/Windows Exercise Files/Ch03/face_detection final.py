@@ -24,5 +24,6 @@ for face_location in face_locations:
     draw = PIL.ImageDraw.Draw(pil_image)
     draw.rectangle([left, top, right, bottom], outline="red")
 
+
 # Display the image on screen
 pil_image.show()
