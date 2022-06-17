@@ -1,12 +1,12 @@
 import PIL.Image
 import PIL.ImageDraw
-
+import face_recognition
 
 # Load the jpg file into a numpy array
-
+image = face_recognition.load_image_file("Exercise Files\Windows Exercise Files\Ch04\people.jpg")
 
 # Find all facial features in all the faces in the image
-
+face_landmarks_list = face_recognition.face_landmarks(image)
 
 number_of_faces = len(face_landmarks_list)
 print("I found {} face(s) in this photograph.".format(number_of_faces))
