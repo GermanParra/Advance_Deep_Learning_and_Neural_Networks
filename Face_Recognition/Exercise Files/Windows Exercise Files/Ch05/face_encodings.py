@@ -1,10 +1,10 @@
-
+import face_recognition
 
 # Load the jpg files into numpy arrays
-
+image = face_recognition.load_image_file("Exercise Files\Windows Exercise Files\Ch05\person.jpg")
 
 # Generate the face encodings
-
+face_encodings = face_recognition.face_encodings(image)
 
 if len(face_encodings) == 0:
     # No faces found in the image.
