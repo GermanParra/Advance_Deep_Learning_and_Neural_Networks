@@ -1,9 +1,9 @@
 import face_recognition
 
 # Load the known images
-image_of_person_1 = face_recognition.load_image_file("person_1.jpg")
-image_of_person_2 = face_recognition.load_image_file("person_2.jpg")
-image_of_person_3 = face_recognition.load_image_file("person_3.jpg")
+image_of_person_1 = face_recognition.load_image_file("Exercise Files\Windows Exercise Files\Ch06\person_1.jpg")
+image_of_person_2 = face_recognition.load_image_file("Exercise Files\Windows Exercise Files\Ch06\person_2.jpg")
+image_of_person_3 = face_recognition.load_image_file("Exercise Files\Windows Exercise Files\Ch06\person_3.jpg")
 
 # Get the face encoding of each person. This can fail if no one is found in the photo.
 person_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]
@@ -18,10 +18,11 @@ known_face_encodings = [
 ]
 
 # Load the image we want to check
-unknown_image = face_recognition.load_image_file("unknown_2.jpg")
+unknown_image = face_recognition.load_image_file(r"Exercise Files\Windows Exercise Files\Ch06\unknown_7.jpg")
 
 # Get face encodings for any people in the picture
-unknown_face_encodings = face_recognition.face_encodings(unknown_image)
+face_locations = face_recognition.face_locations(unknown_image, number_of_times_to_upsample=2)
+unknown_face_encodings = face_recognition.face_encodings(unknown_image, known_face_locations=face_locations)
 
 # There might be more than one person in the photo, so we need to loop over each face we found
 for unknown_face_encoding in unknown_face_encodings:
@@ -39,3 +40,6 @@ for unknown_face_encoding in unknown_face_encodings:
         name = "Person 3"
 
     print(f"Found {name} in the photo!")
+
+if unknown_face_encodings == []:
+    print("No known faces were found in the photo!")
