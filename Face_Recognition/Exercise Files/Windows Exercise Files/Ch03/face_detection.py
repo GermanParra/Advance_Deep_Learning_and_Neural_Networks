@@ -1,10 +1,9 @@
-from turtle import right
 import PIL.Image
 import PIL.ImageDraw
 import face_recognition
 
 # Load the jpg file into a numpy array
-image = face_recognition.load_image_file('Exercise Files\Windows Exercise Files\Ch03\people.jpg')
+image = face_recognition.load_image_file('Exercise Files\Windows Exercise Files\Ch03\TheSolvayConference1927.jpg')
 
 # Find all the faces in the image
 face_locations = face_recognition.face_locations(image)
