@@ -36,7 +36,11 @@ model.add(Dropout(0.5))
 model.add(Dense(10, activation="softmax"))
 
 # Compile the model
-
+model.compile(
+    loss='categorical_crossentropy',
+    optimizer='adam',
+    metrics=['accuracy']
+    )
 
 # Print a summary of the model
 model.summary()
