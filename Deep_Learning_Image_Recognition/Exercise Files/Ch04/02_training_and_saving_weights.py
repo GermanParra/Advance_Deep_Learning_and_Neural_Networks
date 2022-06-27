@@ -53,5 +53,9 @@ model.fit(
 )
 
 # Save neural network structure
+model_structure = model.to_json()
+f = Path("model_structure.json")
+f.write_text(model_structure)
 
 # Save neural network's trained weights
+model.save_weights("model_weights.h5")

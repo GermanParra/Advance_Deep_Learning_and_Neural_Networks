@@ -42,3 +42,11 @@ model.compile(
 )
 
 # Train the model
+model.fit(
+    x_train,
+    y_train,
+    batch_size=32,
+    epochs=30,
+    validation_data=(x_test, y_test),
+    shuffle=True
+)
